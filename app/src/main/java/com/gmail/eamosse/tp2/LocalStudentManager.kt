@@ -24,7 +24,12 @@ private var students = mutableListOf(
     }
 
     override fun sortAgeAscDesc(type: String): List<Student> {
-        TODO("Not yet implemented")
+        return if (type == "ASC") {
+            students.sortedBy { it.age }
+        } else if (type == "DESC") {
+            students.sortedByDescending { it.age }
+        }else
+            emptyList()
     }
 
     override fun groupBySex(): Map<String, List<Student>> {

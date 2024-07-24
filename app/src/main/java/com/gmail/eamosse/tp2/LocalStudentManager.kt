@@ -49,7 +49,7 @@ private var students = mutableListOf(
     }
 
     override fun reverse(): List<Student> {
-        TODO("Not yet implemented")
+        return students.reversed()
     }
 
     override fun clear() {

@@ -37,7 +37,7 @@ private var students = mutableListOf(
     }
 
     override fun boysOrGirls(sexe: String): List<Student> {
-        TODO("Not yet implemented")
+        return students.filter { it.sexe == sexe }
     }
 
     override fun onlyNames(): List<String> {

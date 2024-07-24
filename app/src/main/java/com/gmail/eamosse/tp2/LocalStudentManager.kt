@@ -45,7 +45,7 @@ private var students = mutableListOf(
     }
 
     override fun deleteBySex(sex: String) {
-        students.filter { it.sexe != sex }
+        this.students = students.filter { it.sexe != sex }.toMutableList()
     }
 
     override fun reverse(): List<Student> {
@@ -53,7 +53,7 @@ private var students = mutableListOf(
     }
 
     override fun clear() {
-        TODO("Not yet implemented")
+        students.removeAll(students)
     }
     /**
      * listOf(
